@@ -1,0 +1,130 @@
+/* --------------
+     GENERAL     
+-------------- */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Moderateviolet: hsl(263, 55%, 52%);
+    --Verydarkgrayishblue: hsl(217, 19%, 35%);
+    --Verydarkblackishblue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Lightgray: hsl(0, 0%, 81%);
+    --Lightgrayishblue: hsl(210, 46%, 95%);
+}
+
+body {
+    Font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: var(--Lightgray);
+    margin-top: 50px;
+}
+
+
+/* --------------
+CONTENT BOX STYLING    
+-------------- */
+
+.content-box {
+    width: 90%;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.content-box > * {
+    padding-block: 10px;
+}
+
+.content-box-1 {
+    position:relative;
+    grid-column:  1 / 3;
+    color: var(--White);
+    background-color: var(--Moderateviolet);
+}
+svg {
+    position:absolute;
+    right: 50px;
+    top: -7px;
+    opacity: 70%;
+}
+.content-box-2 {
+    color: var(--White);
+    background-color: var(--Verydarkgrayishblue);
+}
+
+.content-box-3 {
+    color: var(--Verydarkgrayishblue);
+    background-color: var(--White);
+}
+
+.content-box-4 {
+    grid-column: span 2;
+    color: var(--White);
+    background-color: var(--Verydarkblackishblue);
+}
+
+.content-box-5 {
+    grid-column: 4;
+    grid-row: 1 / 3;
+    color: var(--Verydarkgrayishblue);
+    background-color: var(--White);
+}
+
+.content-box__Specifications {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.content-box__academic-title {
+    opacity: 50%;
+}
+
+.content-box__image {
+    border-radius: 50%;
+}
+
+.content-box__main-paragraph {
+    font-size: 1.5rem;
+}
+
+.content-box__name {
+    font-size: 1.05rem;
+}
+
+.content-box__paragraph {
+    line-height: 1.4rem;
+    opacity: 70%;
+}
+
+.attribution {
+    margin-top: 20px;
+    color: var(--Verydarkblackishblue)
+}
+
+@media (min-width:375px) {
+
+    body{
+        position: absolute;
+        top:-65px;
+        -webkit-transform: scale(0.70);
+        -moz-transform: scale(0.70);
+        transform: scale(0.70);
+    }
+    article {
+        display:grid;
+        gap: 30px;
+        grid-template-columns: repeat(4 , 1fr);
+    }
+
+    .content-box {
+        width: 100%;
+        margin: 0;
+    }
+}
